@@ -1,0 +1,572 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho de la ventana */
+    min-height: 100vh; /* Hace que al menos tenga el alto de la ventana */
+}
+
+header {
+    background: #f4aee0;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+        display: flex;
+        align-items: center; /* Alinea verticalmente */
+        justify-content: space-between; /* Separa izquierda, centro y derecha */
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto; /* Centra la navegación */
+        padding: 0;
+    }
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 45px; /* Espacio entre botones */
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: auto;
+    font-size: 1.35vw;
+    font-family: "Finger Paint", serif;
+}
+
+li {
+    transition: transform 0.25s
+}
+
+li:hover {
+    transform: scale(1.15); /* Agranda el ícono al pasar el mouse */
+    cursor: pointer;   /* Cambia el cursor a mano */
+}
+
+
+.nav-left {
+    flex: 1; /* Ocupa el espacio de la izquierda */
+    display: flex;
+    justify-content: flex-start; /* Alinea a la izquierda */
+    margin-left: 22px;
+}
+
+.nav-right {
+    flex: 1; /* Ocupa el espacio de la derecha */
+    display: flex;
+    justify-content: flex-end; /* Alinea a la derecha */
+    margin-right: 22px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin: 0;
+}
+
+main {
+    padding: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.presentacion {
+    margin: 0;
+    padding: 0;
+    padding-top: 10;
+}
+
+.saborescrepe {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Se adapta al ancho del contenedor */
+    margin-top: 20px;
+}
+
+div img {
+    width: 460px;
+    height: 390px;
+}
+
+p {
+    font-family: "Fuzzy Bubbles", serif;
+    font-style: italic;
+    font-size: 2vh;
+}
+
+h2 {
+    font-family: "Fredericka the Great", serif;
+    font-size: 5.5vh;
+}
+
+h3 {
+    font-family: "Fuzzy Bubbles", serif;
+    font-size: 4vh;
+}
+
+.saborescrepe h2 {
+    font-size: 4vh;
+}
+
+div iframe {
+    margin-top: 20px;
+}
+
+
+.saladas {
+    grid-area: 1 / 1 / 2 / 3;
+    transition: transform 0.2s; /* Efecto al pasar el mouse */
+}
+
+.dulces {
+    grid-area: 1 / 3 / 2 / 6; 
+    transition: transform 0.2s; /* Efecto al pasar el mouse */
+}
+
+.saladas:hover {
+    transform: scale(1.1); /* Agranda el ícono al pasar el mouse */
+    cursor: default;
+}
+
+.dulces:hover {
+    transform: scale(1.1); /* Agranda el ícono al pasar el mouse */
+    cursor: default;
+}
+
+.crepe1 {
+    grid-area: 2 / 1 / 3 / 3;
+    margin: 20px auto;
+} 
+
+.crepe2 {
+    grid-area: 2 / 3 / 3 / 6; 
+    margin: 20px auto;
+}
+
+.maps h2 {
+    font-family: "Fredericka the Great", serif;
+    margin-top: 100px;
+}
+
+.saboressmoothies {
+    margin-top: 20px;
+}
+
+.smoothies {
+    width: 700px;
+    height: auto;
+    margin-top: 40px;
+}
+
+.redes h2 {
+    margin-top: 20px;
+}
+
+.redes h3 {
+    font-size: 3vh;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.siguenos {
+    margin-top: 100px;
+}
+
+section {
+    width: 100%; /* Ocupa todo el ancho */
+    height: 100vh; /* Ocupa todo el alto de la ventana */
+}
+
+footer {
+    background: #f4aee0;
+    color: black;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+footer p {
+    font-size: 2vh;
+    font-style: normal;
+}
+
+.up-icon {
+    width: 70px;
+    height: 70px;
+}
+.scroll-to-top {
+    margin-top: 180px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 100px auto;
+}
+
+.social-icon {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.25s /* Efecto al pasar el mouse */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Agranda el ícono al pasar el mouse */
+    cursor: pointer;   /* Cambia el cursor a mano */
+}
+
+.scroll-to-top:hover {
+    transform: scale(1.2); /* Agranda el ícono al pasar el mouse */
+    cursor: pointer;   /* Cambia el cursor a mano */    
+}
+
+/* ====== Notebooks y pantallas pequeñas ====== */
+/* Notebooks y pantallas medianas (992px - 1200px) */
+@media (min-width: 993px) and (max-width: 1401px) {
+    /* Estilos para laptops pequeñas */
+    .saborescrepe {
+        display: grid;
+        grid-template-columns: auto;
+        
+    }
+    body {
+        background-color: black;
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    body {
+        width: 100%;
+    }
+
+    .presentacion {
+        padding-top: 40px;
+    }
+
+    nav a {
+        font-size: 1.5vh; 
+     }
+
+    .logo {
+        width: 75px;
+    }
+
+    .saborescrepe {
+        display: grid;
+        grid-template-columns: repeat(3, auto);  
+        grid-template-rows: repeat(2, auto);
+        margin-top: 100px;
+    }
+
+    .crepe1 {
+        width: 250px;
+        height: 250px;
+        grid-area: 2 / 1 / 3 / 4;
+    }
+
+    .crepe2 {
+        width: 250px;
+        height: 250px;
+    }
+
+    .saladas {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    
+    * {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 4.5vh;
+    }
+
+    .up-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    body {
+        width: 100%;
+    }
+
+    .presentacion {
+        padding-top: 60px;
+    }
+
+    nav a {
+        font-size: 1.05vh; 
+     }
+
+     .nav-left {
+        margin-left: 5px;
+    }
+    
+    .nav-right {
+        margin-right: 5px;
+    }
+
+    .logo {
+        width: 50px;
+        margin-left: 30px;
+    }
+
+    .saborescrepe {
+        display: grid;
+        grid-template-columns: repeat(3, auto);  
+        grid-template-rows: repeat(2, auto);
+        margin-top: 100px;
+    }
+
+    .crepe1 {
+        width: 200px;
+        height: 220px;
+        grid-area: 2 / 2 / 3 / 3;
+        
+    }
+
+    .crepe2 {
+        width: 200px;
+        height: 220px;
+    }
+
+    .saladas {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    
+    * {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 3.6vh;
+    }
+
+    .up-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .scroll-to-top {
+        margin-top: 250px;
+    }
+
+    .mapa {
+        width: 500px;
+        height: 110px;
+    }
+
+    .smoothies {
+        width: 500px;
+        height: 200px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    body {
+        width: 100%;
+    }
+
+    .presentacion {
+        padding-top: 60px;
+    }
+
+    nav a {
+        font-size: 1.05vh; 
+     }
+
+     .nav-left {
+        margin-left: 5px;
+    }
+    
+    .nav-right {
+        margin-right: 5px;
+    }
+
+    .logo {
+        width: 50px;
+        margin-left: 30px;
+    }
+
+    .saborescrepe {
+        display: grid;
+        grid-template-columns: repeat(3, auto);  
+        grid-template-rows: repeat(2, auto);
+        margin-top: 100px;
+    }
+
+    .crepe1 {
+        width: 200px;
+        height: 220px;
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .crepe2 {
+        width: 200px;
+        height: 220px;
+    }
+
+    .saladas {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    
+    * {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 3.6vh;
+    }
+
+    .up-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .scroll-to-top {
+        margin-top: 250px;
+    }
+
+    .mapa {
+        width: 500px;
+        height: 110px;
+    }
+
+    .smoothies {
+        width: 500px;
+        height: 200px;
+    }
+}
+
+/* Si activo esto, se achica toda mi pagina en width Desktop... 
+@media (min-width: 375px) {
+    body {
+        width: 100%;
+    }
+
+    .presentacion {
+        padding-top: 60px;
+    }
+
+    nav a {
+        font-size: 1.05vh; 
+     }
+
+     .nav-left {
+        margin-left: 5px;
+    }
+    
+    .nav-right {
+        margin-right: 5px;
+    }
+
+    .logo {
+        width: 50px;
+        margin-left: 30px;
+    }
+
+    .saborescrepe {
+        display: grid;
+        grid-template-columns: repeat(3, auto);  
+        grid-template-rows: repeat(2, auto);
+        margin-top: 100px;
+    }
+
+    .crepe1 {
+        width: 100px;
+        height: 100px;
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .crepe2 {
+        width: 100px;
+        height: 100px;
+    }
+
+    .saladas {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    
+    * {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 3.6vh;
+    }
+
+    .up-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .scroll-to-top {
+        margin-top: 200px;
+    }
+
+    .mapa {
+        width: 300px;
+        height: 110px;
+    }
+
+    .smoothies {
+        width: 310px;
+        height: 200px;
+    }
+
+    .social-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .nav-left {
+        gap: 8px;
+    }
+
+    .nav-right {
+        gap: 8px;
+    }
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
